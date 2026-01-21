@@ -11,14 +11,14 @@ from setuptools import setup, find_packages, Extension
 
 from setuptools import Extension, find_packages, setup
 
-
 if sys.version_info < (3, 6):
     sys.exit("Sorry, Python >= 3.6 is required for fairseq.")
 
 
 def write_version_py():
-    with open(os.path.join("fairseq", "version.txt")) as f:
-        version = f.read().strip()
+    # with open(os.path.join("fairseq", "version.txt")) as f:
+    #     version = f.read().strip()
+    version = 0.1
 
     # append latest commit hash to version string
     try:
@@ -196,6 +196,7 @@ def do_setup(package_data):
             'numpy<1.20.0; python_version<"3.7"',
             'numpy; python_version>="3.7"',
             "setuptools>=18.0",
+            "pip<0.24",
         ],
         install_requires=[
             "cffi",
@@ -262,7 +263,8 @@ if __name__ == "__main__":
 
         package_data = {
             "fairseq": (
-                get_files(fairseq_examples) + get_files(os.path.join("fairseq", "config"))
+                get_files(fairseq_examples)
+                + get_files(os.path.join("fairseq", "config"))
             )
         }
         do_setup(package_data)

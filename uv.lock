@@ -22,12 +22,13 @@ dependencies = [
     { name = "python-speech-features" },
     { name = "scipy" },
     { name = "sentencepiece" },
+    { name = "setuptools" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "editdistance", specifier = "==0.6.0" },
-    { name = "fairseq", editable = "additional_modules/fairseq" },
+    { name = "fairseq", directory = "additional_modules/fairseq" },
     { name = "numpy", specifier = "==1.23.0" },
     { name = "opencv-python", specifier = "==4.5.4.60" },
     { name = "pdbpp", specifier = ">=0.11.7" },
@@ -35,6 +36,7 @@ requires-dist = [
     { name = "python-speech-features", specifier = "==0.6" },
     { name = "scipy", specifier = "==1.10.0" },
     { name = "sentencepiece", specifier = "==0.1.96" },
+    { name = "setuptools" },
 ]
 
 [[package]]
@@ -105,8 +107,8 @@ wheels = [
 
 [[package]]
 name = "fairseq"
-version = "1.0.0a0"
-source = { editable = "additional_modules/fairseq" }
+version = "0.1"
+source = { directory = "additional_modules/fairseq" }
 dependencies = [
     { name = "cffi" },
     { name = "cython" },
@@ -579,6 +581,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/68/91/ded0f64f90abfc5413c620fc345a0aef1e7ff5addda8704cc6b3bf589c64/sentencepiece-0.1.96-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a336575463d75d3aac1f7e32470b8998643ccd9a73786bd726f6b0470520b6b4", size = 1214001, upload-time = "2021-06-18T09:34:10.877Z" },
     { url = "https://files.pythonhosted.org/packages/05/84/fe3fb4ca177ea15664399350a1fec83a8ef7ba48f0493d13517a8c926ddd/sentencepiece-0.1.96-cp38-cp38-win32.whl", hash = "sha256:81bb77ba3651114943b2f8f77829cf764137dff06e38f4bf7fa43efea12c7f84", size = 1030233, upload-time = "2021-06-18T09:34:13.051Z" },
     { url = "https://files.pythonhosted.org/packages/5d/b5/81c33f060b365ff3f753fdc24a373e19baa04eda4260c096be3ae2ac9481/sentencepiece-0.1.96-cp38-cp38-win_amd64.whl", hash = "sha256:eba0471ab0bb2e07ed06d91ecf5185d402c83d194155a41d8e2aa547d187712e", size = 1091430, upload-time = "2021-06-18T09:34:14.682Z" },
+]
+
+[[package]]
+name = "setuptools"
+version = "75.3.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0f/39/f1ebaff44e10205f0bea607c960a4d482d0c4fd40b49c2f96ce9e1d271d1/setuptools-75.3.3.tar.gz", hash = "sha256:22e8a8ef763eb571d8e414e29b1b9fa9fd0ae3cdcb973ad51c12d8d3ee38ff5c", size = 1354448, upload-time = "2026-01-14T21:46:48.78Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/78/fb/6788074dccc5c9826a81b85fd8f15972a6833521892817d091854be56133/setuptools-75.3.3-py3-none-any.whl", hash = "sha256:4f198f37d40550b86ebc2a678e2246ef76fbec316619a5ac61ecbb3cabf8e9bf", size = 1251571, upload-time = "2026-01-14T21:46:46.564Z" },
 ]
 
 [[package]]
